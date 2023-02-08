@@ -29,8 +29,7 @@ jobs:
           pip install pytest
           pip install pytest_qt
           pip install pyside6
-          apt-get update 
-          apt-get install ffmpeg libsm6 libxext6  -y
+          apt-get update && apt-get install libgl1
       - name: Run pytest
         run: |
           pytest
