@@ -30,4 +30,4 @@ jobs:
           pip install pytest_qt
           pip install pyside6
       - name: Run pytest
-        run: python -m pytest --import-mode=append
+        run: pytest
