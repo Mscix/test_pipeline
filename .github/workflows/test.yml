@@ -33,5 +33,6 @@ jobs:
           # pytest-qt's dependency
           sudo apt-get install -y libgles2-mesa-dev
       - name: Run pytest
+      # cache is messedup ...
         run: |
-          pytest
+          python -m pytest --import-mode=append
