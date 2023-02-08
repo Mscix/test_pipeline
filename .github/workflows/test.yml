@@ -16,15 +16,7 @@ jobs:
 
       - name: checkout to current branch
         run: git checkout ${{ env.BRANCH }}
-
-      - name: Install non-python dependencies on Ubuntu
-        if: runner.os == 'Linux'
-        run: |
-          sudo apt-get update -y
-          # pytest-qt's dependency
-          sudo apt-get install -y libgles2-mesa-dev
-          # explorepy's dependency
-          sudo apt-get install libbluetooth-dev
+        
       - name: Set up Python ${{ matrix.python }}
         uses: actions/setup-python@v2
         with:
