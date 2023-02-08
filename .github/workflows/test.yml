@@ -29,7 +29,9 @@ jobs:
           pip install pytest
           pip install pytest_qt
           pip install pyside6
-          sudo apt-get update && apt-get install libgl1
+          sudo apt-get update -y
+          # pytest-qt's dependency
+          sudo apt-get install -y libgles2-mesa-dev
       - name: Run pytest
         run: |
           pytest
